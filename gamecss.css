@@ -1,0 +1,114 @@
+*{padding:0px;margin: 0px;list-style-type: none;text-decoration: none}
+.all{width: 86%;margin-left:7%; }
+/* 导航 */
+.navigation{width: 100%;height: 70px;}
+.nav ul li{float: left;line-height: 70px;padding-left: 40px;box-sizing: border-box;}
+.nav ul li a{color: #000000;font-size: 18px;}
+.nav ul li a:hover{color: orange;}
+.nav ul li:last-child{float: right;}
+.nav ul li input:focus{outline: none;}
+.nav_input{border: none;padding: 10px 60px;background: #F5F5F5;border-radius: 10px;}
+/* 轮播图 */
+.carousel{width: 100%;height: 500px;position: relative;}
+.carPic{width: 100%;height: 500px;background: black;}
+.pic-l{width: 50%;height: 500px;position: absolute;}
+.pic-r{width: 50%;height: 500px;position: absolute;left: 50%;}
+.pic-l img{width:100%;height:100%;}
+.pic-r ul li a img{width: 50%;height: 250px;float: left;}
+/* 热门页游戏 */
+.tab{width: 100%;}
+.navbar{width: 100%;}
+.nav-l{width: 65%;float: left;}
+.nav-l-t{width: 100%;height: 80px;line-height: 80px;}
+.nav-l-t ul li{float: left;padding-left: 35px;font-size: 14px;}
+.nav-l-t ul li a{color: #000000;}
+.nav-l-t ul li a:hover{color:orange;}
+.nav-l-t ul li:first-child{font-size: 26px;font-weight: bold;padding-left: 0px;}
+.nav-l-t ul li:last-child{float: right;padding-right:10px;}
+.nav-l-b{width:100%;}
+.nav-l-b ul li{width: 25%;float: left;padding: 5px;box-sizing: border-box;}
+.nav-l-b ul li .p1{font-size: 18px;}
+.nav-l-b ul li .p2{font-size: 13px; color: grey;}
+.nav-l-b ul li img{width: 100%;height: 200px;border-radius:15px 15px 10px 10px;}
+.nav-r{width: 30%;margin-left:5%;float:left;}
+.nav-r-t{width: 100%;height: 80px;line-height: 80px;}
+.nav-r-t ul li{float: left;}
+.nav-r-t ul li:nth-child(2){margin: 0px 25px;color: #808080;}
+.nav-r-t ul li:first-child,.nav-r-t ul li:last-child{font-size: 20px;font-weight: bold;}
+.nav-r-t ul li a{color: #000000;}
+.nav-r-t ul li a:hover{color: orange;}
+.nav-r-b{}
+.nav-r-b ul li{width: 100%;height: 55px; line-height: 55px;}
+.nav-r-b ul li .span1{color: #808080;}
+.nav-r-b ul li .span2{margin-left:50px;color: #000000;}
+.nav-r-b ul li .span3{float: right;margin-right: 10px;color: orange;}
+.nav-r-b ul li:nth-child(n+2){border-top:1px solid #f5f5f5;}
+.nav-r-b ul li:hover{width: 100%;height: 55px;background-color: #f3f3f3;}
+.nav-r-b ul li a span:hover{color: orange;}
+/* 清除浮动 */
+.clearfloat:after{display: block;clear: both;content:"";visibility: hidden;height: 0;}
+.clearfloat{zoom: 1;}
+/* H5游戏 */
+.H5{width: 100%;margin-top:30px;}
+.H5-title{width: 100%;height: 60px;line-height: 60px;font-size: 24px;font-weight: bold}
+.H5games,.H5games1{width: 100%;height: 100px;margin-top:25px;}
+.H5games1{margin-top: 45px;}
+.H5game{width: 25%;height: 100px;float: left;}
+.H5Img{width: 30%;height: 100px;float: left;}
+.H5Img img{width: 100%;height: 100px;border-radius: 10px;}
+.H5Text{width: 70%;height: 100px;float: left;box-sizing: border-box;padding-left: 10px;}
+.H5-p1{font-size: 18px;}
+.H5-p1:hover{color: orange;cursor: pointer;}
+.H5-p2{font-size: 13px;margin:8px 0px 12px 0px;cursor: pointer;}
+.btn{cursor: pointer;width: 70px;height: 30px;background: orange;border-radius:10px;border-style:none;}
+/* 热门端游 */
+.clientGame{width: 100%;margin-top:60px;}
+.client-tab{width: 100%;height: 60px;line-height: 60px;}
+.client-tab ul li {float: left;}
+.client-tab ul li:first-child{font-size: 24px;font-weight: bold;}
+.client-tab ul li:nth-child(n+2){margin-left: 40px;}
+.client-tab ul li a{color: #000000;font-size: 14px;}
+.client-tab ul li a:hover{color: orange;}
+.client-img{width: 100%;height: 300px;}
+.clientImg-p{width: 100%;height: 300px;;float: left;}
+.clientImg-p ul li{float: left;width: 14.2%;}
+.clientImg-p ul li:nth-child(n+2){padding-left: 15px;box-sizing: border-box;}
+.clientImg-p ul li a img{width:100%;height:200px;border-radius:10px;}
+.client-p1{font-size: 18px;color: #000000;margin-top: 10px;}
+.client-p1:hover{color: orange;}
+.client-p2{font-size: 14px; color: #808080;}
+/* 小游戏 */
+.miniGame{width: 100%;}
+.mini-tab{width: 100%;height: 60px;line-height: 60px;}
+.mini-tab-s1{float: left;font-size: 24px;font-weight: bold;}
+.mini-tab-s2{float: right;color: #808080;cursor: pointer;margin-right: 30px;}
+.mini-tab-s2:hover{color: orange;}
+.mini{width: 100%;}
+.mini-game{width: 100%;height: 70px;float: left;margin: 25px 0px;}
+.mini_games{width: 16.6%;height: 70px;float: left;}
+.mini_games_img{width: 30%; float: left;}
+.mini_games_img img{width: 100%;height: 70px;border-radius: 8px;}
+.mini_games_p{width: 70%;height: 70px; float: left;box-sizing: border-box;padding-left: 15px;}
+.mini_p1,.mini_p2{margin-top: 8px;}
+/* 游戏列表 */
+.gameList{width: 100%;}
+.list1,.list2,.list3{width: 100%;height: 60px;line-height: 60px;}
+.list1 ul li,.list2 ul li,.list3 ul li{float: left;}
+.list1 ul li:first-child{font-size: 24px;font-weight: bold;}
+.list1 ul li:nth-child(n+2){margin-left: 40px}
+.list1 ul li a,.list2 ul li a,.list3 ul li a{color: #000000;}
+.list1 ul li a:hover,.list2 ul li a:hover,.list3 ul li a:hover{color: orange;}
+.list2{padding-left: 13%;box-sizing: border-box;}
+.list2 ul li,.list3 ul li{margin-left: 40px;}
+.list3{padding-left: 7%;box-sizing: border-box;}
+.list_icon{width: 100%;}
+.game_icon{width: 100%;height: 70px;margin-top:30px;}
+.list_icon_img{width: 16.6%;height: 70px;line-height: 70px;;float: left;}
+.list_icon_img img{width: 70px;height: 70px;border-radius: 8px;float: left;cursor: pointer;}
+.list_icon_p{float: left;margin-left: 10px;cursor: pointer;}
+.list_icon_p:hover{color: orange;}
+/* 底部 */
+.foot{width: 100%; border-top:1px solid #808080;margin: 80px 0px 0px 0px;}
+.foot_text{color: #808080;font-size: 14px;margin-top: 20px;margin-bottom: 80px;}
+
+
