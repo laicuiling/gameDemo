@@ -1,0 +1,1362 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)https://www.cnblogs.com/humi/p/8496152.html -->
+<html lang="zh-cn"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="origin">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <title>Bootstrap4 glyphicon 移除图标 glyphicon fonts-faces 解决方案 - 言非言 - 博客园</title>
+    <meta property="og:description" content="bootrap3是支持的图标 ，4不支持 4已经移除了 收费图标，取而代之建议使用其他的，比如 https://octicons.github.com/ 和http://fontawesome.io/">
+    <link type="text/css" rel="stylesheet" href="./fonts_files/blog-common.css">
+<link type="text/css" rel="stylesheet" href="./fonts_files/341677.css">
+<link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="./fonts_files/bundle-SimpleMemory-mobile.css">
+    <link title="RSS" type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/humi/rss">
+    <link title="RSD" type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/humi/rsd.xml">
+<link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/humi/wlwmanifest.xml">
+    <script src="./fonts_files/amp4ads-host-v0.js.下载"></script><script src="./fonts_files/pubads_impl_rendering_2019053001.js.下载"></script><script async="" src="./fonts_files/analytics.js.下载"></script><script src="./fonts_files/jquery-2.2.0.min.js.下载"></script>
+    <script>var currentBlogId=341677;var currentBlogApp='humi',cb_enable_mathjax=true;var isLogined=false;</script>
+    <script type="text/x-mathjax-config;executed=true">
+    MathJax.Hub.Config({
+        tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']], processClass: 'math', processEscapes: true },
+        TeX: { 
+            equationNumbers: { autoNumber: ['AMS'], useLabelIds: true }, 
+            extensions: ['extpfeil.js'],
+            Macros: {bm: "\\boldsymbol"}
+        },
+        'HTML-CSS': { linebreaks: { automatic: true } },
+        SVG: { linebreaks: { automatic: true } }
+        });
+    </script><script src="./fonts_files/MathJax.js.下载"></script>
+<script src="./fonts_files/blog-common.js.下载" type="text/javascript"></script>
+<style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><link rel="preload" href="./fonts_files/f.txt" as="script"><script type="text/javascript" src="./fonts_files/f.txt"></script><script src="./fonts_files/pubads_impl_2019053001.js.下载" async=""></script><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><link rel="prefetch" href="https://tpc.googlesyndication.com/safeframe/1-0-33/html/container.html"></head>
+<body><div id="MathJax_Message" style="display: none;"></div>
+<a name="top"></a>
+
+<!--PageBeginHtml Block Begin-->
+<!-- <a href="https://github.com/Himi7362" ><img style="position:absolute;top:0;right:0;border:0;width:auto;" src="https://files.cnblogs.com/files/humi/forkme.bmp" alt="Fork me on GitHub" data-canonical-src="https://github.com/Himi7362"/></a>  -->
+
+<div id="fixed-btn">
+<a id="totop" class="totop" title="顶部" style="display: ;"><img src="./fonts_files/向上箭头.bmp"></a>
+<a class="qrcode" title="赞助"><img src="./fonts_files/二维码.bmp"></a>
+<a class="like" id="likeid" title="点赞"><img src="./fonts_files/聚收藏.bmp"></a>
+ <div id="bottom-qrcode" class="modal panel-modal hide fade in" style="display:none ;">
+      <h4 id="bottom-qrcode-tit">微信赞助</h4>
+      <div class="panel-body"><img alt="微信" width="128" height="128" src="./fonts_files/wc.bmp"></div> 
+   </div>
+ 	
+</div>
+<!--PageBeginHtml Block End-->
+
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+	<a id="lnkBlogLogo" href="https://www.cnblogs.com/humi/"><img id="blogLogo" src="./fonts_files/logo.gif" alt="返回主页"></a>			
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle" href="https://www.cnblogs.com/humi/">言非言</a></h1>
+<h2>以大多数人努力程度，还谈不上天赋</h2>
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">博客园</a></li>
+<li><a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/humi/">首页</a></li>
+<li><a id="blog_nav_newpost" class="menu" rel="nofollow" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">新随笔</a></li>
+<li><a id="blog_nav_contact" class="menu" rel="nofollow" href="https://msg.cnblogs.com/send/%E8%A8%80%E9%9D%9E%E8%A8%80">联系</a></li>
+<li><a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/humi/rss">订阅</a>
+<!--<a id="blog_nav_rss_image" class="aHeaderXML" href="https://www.cnblogs.com/humi/rss"><img src="//www.cnblogs.com/images/xml.gif" alt="订阅" /></a>--></li>
+<li><a id="blog_nav_admin" class="menu" rel="nofollow" href="https://i.cnblogs.com/">管理</a></li>
+</ul>
+		<div class="blogStats">
+			
+			<div id="blog_stats">
+<span id="stats_post_count">随笔 - 151&nbsp; </span>
+<span id="stats_article_count">文章 - 0&nbsp; </span>
+<span id="stats-comment_count">评论 - 15</span>
+</div>
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		
+        <div id="post_detail">
+<!--done-->
+<div id="topics">
+	<div class="post">
+		<h1 class="postTitle">
+			<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/humi/p/8496152.html">Bootstrap4 glyphicon 移除图标 glyphicon fonts-faces 解决方案</a>
+		</h1>
+		<div class="clear"></div>
+		<div class="postBody">
+			<div id="cnblogs_post_body" class="blogpost-body cnblogs-markdown"><h2 id="bootrap3是支持的图标-4不支持">bootrap3是支持的图标 ，4不支持</h2>
+<p><img src="./fonts_files/1128666-20180303112351921-1801024566.png"><br>
+4已经移除了 收费图标，取而代之建议使用其他的，比如 https://octicons.github.com/ 和http://fontawesome.io/ 但是3和4我都用过的，直接扣下了3里面的部分。<br>
+如图目录结构：<br>
+<img src="./fonts_files/1128666-20180303113327570-1605328772.png"></p>
+<h2 id="您可以将一下代码copy到您引入的bootstrap-4.0.0-distcssbootstrap.css-文件中">您可以将一下代码copy到您引入的bootstrap-4.0.0-dist/css/bootstrap.css 文件中</h2>
+<h2 id="注意注意如下代码依赖glyphicons-.eotglyphicons-.ttfglyphicons-.svg-文件">注意：（注意：如下代码依赖glyphicons-<em>.eot、glyphicons-</em>.ttf、glyphicons-*.svg 文件）</h2>
+<pre><code class="hljs css">@<span class="hljs-keyword">font-face</span> {
+  <span class="hljs-attribute">font-family</span>: <span class="hljs-string">'Glyphicons Halflings'</span>;
+
+  <span class="hljs-attribute">src</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">'../fonts/glyphicons-halflings-regular.eot'</span>);
+  <span class="hljs-attribute">src</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">'../fonts/glyphicons-halflings-regular.eot?#iefix'</span>) <span class="hljs-built_in">format</span>(<span class="hljs-string">'embedded-opentype'</span>), <span class="hljs-built_in">url</span>(<span class="hljs-string">'../fonts/glyphicons-halflings-regular.woff2'</span>) <span class="hljs-built_in">format</span>(<span class="hljs-string">'woff2'</span>), <span class="hljs-built_in">url</span>(<span class="hljs-string">'../fonts/glyphicons-halflings-regular.woff'</span>) <span class="hljs-built_in">format</span>(<span class="hljs-string">'woff'</span>), <span class="hljs-built_in">url</span>(<span class="hljs-string">'../fonts/glyphicons-halflings-regular.ttf'</span>) <span class="hljs-built_in">format</span>(<span class="hljs-string">'truetype'</span>), <span class="hljs-built_in">url</span>(<span class="hljs-string">'../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular'</span>) <span class="hljs-built_in">format</span>(<span class="hljs-string">'svg'</span>);
+}
+<span class="hljs-selector-class">.glyphicon</span> {
+  <span class="hljs-attribute">position</span>: relative;
+  <span class="hljs-attribute">top</span>: <span class="hljs-number">1px</span>;
+  <span class="hljs-attribute">display</span>: inline-block;
+  <span class="hljs-attribute">font-family</span>: <span class="hljs-string">'Glyphicons Halflings'</span>;
+  <span class="hljs-attribute">font-style</span>: normal;
+  <span class="hljs-attribute">font-weight</span>: normal;
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1</span>;
+
+  <span class="hljs-attribute">-webkit-font-smoothing</span>: antialiased;
+  <span class="hljs-attribute">-moz-osx-font-smoothing</span>: grayscale;
+}
+<span class="hljs-selector-class">.glyphicon-asterisk</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\002a"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-plus</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\002b"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-euro</span><span class="hljs-selector-pseudo">:before</span>,
+<span class="hljs-selector-class">.glyphicon-eur</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\20ac"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-minus</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\2212"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-cloud</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\2601"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-envelope</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\2709"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-pencil</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\270f"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-glass</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e001"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-music</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e002"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-search</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e003"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-heart</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e005"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-star</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e006"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-star-empty</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e007"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-user</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e008"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-film</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e009"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-th-large</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e010"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-th</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e011"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-th-list</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e012"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-ok</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e013"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-remove</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e014"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-zoom-in</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e015"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-zoom-out</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e016"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-off</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e017"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-signal</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e018"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-cog</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e019"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-trash</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e020"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-home</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e021"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-file</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e022"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-time</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e023"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-road</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e024"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-download-alt</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e025"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-download</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e026"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-upload</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e027"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-inbox</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e028"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-play-circle</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e029"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-repeat</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e030"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-refresh</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e031"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-list-alt</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e032"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-lock</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e033"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-flag</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e034"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-headphones</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e035"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-volume-off</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e036"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-volume-down</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e037"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-volume-up</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e038"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-qrcode</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e039"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-barcode</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e040"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-tag</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e041"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-tags</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e042"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-book</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e043"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-bookmark</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e044"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-print</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e045"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-camera</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e046"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-font</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e047"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-bold</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e048"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-italic</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e049"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-text-height</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e050"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-text-width</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e051"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-align-left</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e052"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-align-center</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e053"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-align-right</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e054"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-align-justify</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e055"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-list</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e056"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-indent-left</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e057"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-indent-right</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e058"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-facetime-video</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e059"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-picture</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e060"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-map-marker</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e062"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-adjust</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e063"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-tint</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e064"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-edit</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e065"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-share</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e066"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-check</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e067"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-move</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e068"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-step-backward</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e069"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-fast-backward</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e070"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-backward</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e071"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-play</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e072"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-pause</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e073"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-stop</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e074"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-forward</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e075"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-fast-forward</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e076"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-step-forward</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e077"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-eject</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e078"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-chevron-left</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e079"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-chevron-right</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e080"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-plus-sign</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e081"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-minus-sign</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e082"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-remove-sign</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e083"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-ok-sign</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e084"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-question-sign</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e085"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-info-sign</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e086"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-screenshot</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e087"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-remove-circle</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e088"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-ok-circle</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e089"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-ban-circle</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e090"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-arrow-left</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e091"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-arrow-right</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e092"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-arrow-up</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e093"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-arrow-down</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e094"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-share-alt</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e095"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-resize-full</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e096"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-resize-small</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e097"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-exclamation-sign</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e101"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-gift</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e102"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-leaf</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e103"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-fire</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e104"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-eye-open</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e105"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-eye-close</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e106"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-warning-sign</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e107"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-plane</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e108"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-calendar</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e109"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-random</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e110"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-comment</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e111"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-magnet</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e112"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-chevron-up</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e113"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-chevron-down</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e114"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-retweet</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e115"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-shopping-cart</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e116"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-folder-close</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e117"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-folder-open</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e118"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-resize-vertical</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e119"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-resize-horizontal</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e120"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-hdd</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e121"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-bullhorn</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e122"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-bell</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e123"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-certificate</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e124"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-thumbs-up</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e125"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-thumbs-down</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e126"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-hand-right</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e127"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-hand-left</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e128"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-hand-up</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e129"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-hand-down</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e130"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-circle-arrow-right</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e131"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-circle-arrow-left</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e132"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-circle-arrow-up</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e133"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-circle-arrow-down</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e134"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-globe</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e135"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-wrench</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e136"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-tasks</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e137"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-filter</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e138"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-briefcase</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e139"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-fullscreen</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e140"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-dashboard</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e141"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-paperclip</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e142"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-heart-empty</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e143"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-link</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e144"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-phone</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e145"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-pushpin</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e146"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-usd</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e148"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-gbp</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e149"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-sort</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e150"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-sort-by-alphabet</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e151"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-sort-by-alphabet-alt</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e152"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-sort-by-order</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e153"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-sort-by-order-alt</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e154"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-sort-by-attributes</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e155"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-sort-by-attributes-alt</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e156"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-unchecked</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e157"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-expand</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e158"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-collapse-down</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e159"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-collapse-up</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e160"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-log-in</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e161"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-flash</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e162"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-log-out</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e163"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-new-window</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e164"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-record</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e165"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-save</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e166"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-open</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e167"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-saved</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e168"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-import</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e169"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-export</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e170"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-send</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e171"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-floppy-disk</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e172"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-floppy-saved</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e173"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-floppy-remove</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e174"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-floppy-save</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e175"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-floppy-open</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e176"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-credit-card</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e177"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-transfer</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e178"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-cutlery</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e179"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-header</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e180"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-compressed</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e181"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-earphone</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e182"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-phone-alt</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e183"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-tower</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e184"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-stats</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e185"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-sd-video</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e186"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-hd-video</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e187"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-subtitles</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e188"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-sound-stereo</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e189"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-sound-dolby</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e190"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-sound-5-1</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e191"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-sound-6-1</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e192"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-sound-7-1</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e193"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-copyright-mark</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e194"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-registration-mark</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e195"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-cloud-download</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e197"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-cloud-upload</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e198"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-tree-conifer</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e199"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-tree-deciduous</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e200"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-cd</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e201"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-save-file</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e202"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-open-file</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e203"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-level-up</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e204"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-copy</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e205"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-paste</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e206"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-alert</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e209"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-equalizer</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e210"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-king</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e211"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-queen</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e212"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-pawn</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e213"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-bishop</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e214"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-knight</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e215"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-baby-formula</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e216"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-tent</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\26fa"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-blackboard</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e218"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-bed</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e219"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-apple</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\f8ff"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-erase</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e221"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-hourglass</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\231b"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-lamp</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e223"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-duplicate</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e224"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-piggy-bank</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e225"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-scissors</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e226"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-bitcoin</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e227"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-btc</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e227"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-xbt</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e227"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-yen</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\00a5"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-jpy</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\00a5"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-ruble</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\20bd"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-rub</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\20bd"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-scale</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e230"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-ice-lolly</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e231"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-ice-lolly-tasted</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e232"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-education</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e233"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-option-horizontal</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e234"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-option-vertical</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e235"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-menu-hamburger</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e236"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-modal-window</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e237"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-oil</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e238"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-grain</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e239"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-sunglasses</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e240"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-text-size</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e241"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-text-color</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e242"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-text-background</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e243"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-object-align-top</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e244"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-object-align-bottom</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e245"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-object-align-horizontal</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e246"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-object-align-left</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e247"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-object-align-vertical</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e248"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-object-align-right</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e249"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-triangle-right</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e250"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-triangle-left</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e251"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-triangle-bottom</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e252"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-triangle-top</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e253"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-console</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e254"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-superscript</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e255"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-subscript</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e256"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-menu-left</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e257"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-menu-right</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e258"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-menu-down</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e259"</span>;
+}
+<span class="hljs-selector-class">.glyphicon-menu-up</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\e260"</span>;
+}</code></pre>
+<p>*** 感谢博客园 @ 追枫博客园 指正 fonts/文件引用问题</p>
+</div><div id="MySignature" style="display: block;"><font color="gray">专注于JavaWeb </font></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+<div id="BlogPostCategory"></div>
+<div id="EntryTag">标签: <a href="https://www.cnblogs.com/humi/tag/%E5%89%8D%E7%AB%AF%7CUI/">前端|UI</a></div>
+<div id="blog_post_info"><div id="green_channel">
+        <a href="javascript:void(0);" id="green_channel_digg" onclick="DiggIt(8496152,cb_blogId,1);green_channel_success(this,&#39;谢谢推荐！&#39;);">好文要顶</a>
+            <a id="green_channel_follow" onclick="follow(&#39;070b91d4-820b-e711-845c-ac853d9f53ac&#39;);" href="javascript:void(0);">关注我</a>
+    <a id="green_channel_favorite" onclick="AddToWz(cb_entryId);return false;" href="javascript:void(0);">收藏该文</a>
+    <a id="green_channel_weibo" href="javascript:void(0);" title="分享至新浪微博" onclick="ShareToTsina()"><img src="./fonts_files/icon_weibo_24.png" alt=""></a>
+    <a id="green_channel_wechat" href="javascript:void(0);" title="分享至微信" onclick="shareOnWechat()"><img src="./fonts_files/wechat.png" alt=""></a>
+</div>
+<div id="author_profile">
+    <div id="author_profile_info" class="author_profile_info">
+            <a href="https://home.cnblogs.com/u/humi/" target="_blank"><img src="./fonts_files/20170318105955.png" class="author_avatar" alt=""></a>
+        <div id="author_profile_detail" class="author_profile_info">
+            <a href="https://home.cnblogs.com/u/humi/">言非言</a><br>
+            <a href="https://home.cnblogs.com/u/humi/followees">关注 - 13</a><br>
+            <a href="https://home.cnblogs.com/u/humi/followers">粉丝 - 4</a>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="author_profile_honor"></div>
+    <div id="author_profile_follow">
+                <a href="javascript:void(0);" onclick="follow(&#39;070b91d4-820b-e711-845c-ac853d9f53ac&#39;);return false;">+加关注</a>
+    </div>
+</div>
+<div id="div_digg">
+    <div class="diggit" onclick="votePost(8496152,&#39;Digg&#39;)">
+        <span class="diggnum" id="digg_count">2</span>
+    </div>
+    <div class="buryit" onclick="votePost(8496152,&#39;Bury&#39;)">
+        <span class="burynum" id="bury_count">0</span>
+    </div>
+    <div class="clear"></div>
+    <div class="diggword" id="digg_tips">
+    </div>
+</div>
+<script type="text/javascript">
+    currentDiggType = 0;
+</script></div>
+<div class="clear"></div>
+<div id="post_next_prev"><a href="https://www.cnblogs.com/humi/p/8493986.html" class="p_n_p_prefix">« </a> 上一篇：<a href="https://www.cnblogs.com/humi/p/8493986.html" title="发布于2018-03-02 16:38">eclipse 部署Tomcat  只有web-inf   webapps没有项目文件</a><br><a href="https://www.cnblogs.com/humi/p/8506834.html" class="p_n_p_prefix">» </a> 下一篇：<a href="https://www.cnblogs.com/humi/p/8506834.html" title="发布于2018-03-04 23:24">转：common.js 常用js公共函数库</a><br></div>
+</div>
+
+
+		</div>
+		<div class="postDesc">posted @ <span id="post-date">2018-03-03 11:35</span> <a href="https://www.cnblogs.com/humi/">言非言</a> 阅读(<span id="post_view_count">8556</span>) 评论(<span id="post_comment_count">8</span>)  <a href="https://i.cnblogs.com/EditPosts.aspx?postid=8496152" rel="nofollow">编辑</a> <a href="https://www.cnblogs.com/humi/p/8496152.html#" onclick="AddToWz(8496152);return false;">收藏</a></div>
+	</div>
+	<script src="./fonts_files/highlight.min.js.下载"></script><script>markdown_highlight();</script><script type="text/javascript">var allowComments=true,cb_blogId=341677,cb_entryId=8496152,cb_blogApp=currentBlogApp,cb_blogUserGuid='070b91d4-820b-e711-845c-ac853d9f53ac',cb_entryCreatedDate='2018/3/3 11:35:00';loadViewCount(cb_entryId);var cb_postType=1;var isMarkdown=true;</script>
+	
+</div><!--end: topics 文章、评论容器-->
+</div><a name="!comments"></a><div id="blog-comments-placeholder"><div id="comments_pager_top"></div>
+<br>
+<div class="feedback_area_title">评论列表</div>
+<div class="feedbackNoItems"></div>	
+
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+				<div class="feedbackManage">
+					&nbsp;&nbsp;<span class="comment_actions"></span>
+				</div>
+				<a href="https://www.cnblogs.com/humi/p/8496152.html#3944699" class="layer">#1楼</a><a name="3944699" id="comment_anchor_3944699"></a>  <span class="comment_date">2018-04-08 09:58</span> <a id="a_comment_author_3944699" href="http://home.cnblogs.com/u/1076619/" target="_blank">追枫博客园</a> <a href="http://msg.cnblogs.com/send/%E8%BF%BD%E6%9E%AB%E5%8D%9A%E5%AE%A2%E5%9B%AD" title="发送站内短消息" class="sendMsg2This">&nbsp;</a>
+			</div>
+			<div class="feedbackCon">
+				<div id="comment_body_3944699" class="blog_comment_body">感谢楼主的文章！<br><br>按楼主所说，如果我想用bootstrap3的字体fonts文件，只能自己安装一个bootstrap3的版本吗？可以单独下载么</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(3944699,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(3944699,&#39;Bury&#39;,this)">反对(0)</a></div>
+			</div>
+		</div>
+	
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+				<div class="feedbackManage">
+					&nbsp;&nbsp;<span class="comment_actions"></span>
+				</div>
+				<a href="https://www.cnblogs.com/humi/p/8496152.html#3944728" class="layer">#2楼</a><a name="3944728" id="comment_anchor_3944728"></a>[<span class="louzhu">楼主</span>]  <span class="comment_date">2018-04-08 10:15</span> <a id="a_comment_author_3944728" href="https://www.cnblogs.com/humi/" target="_blank">言非言</a> <a href="http://msg.cnblogs.com/send/%E8%A8%80%E9%9D%9E%E8%A8%80" title="发送站内短消息" class="sendMsg2This">&nbsp;</a>
+			</div>
+			<div class="feedbackCon">
+				<div id="comment_body_3944728" class="blog_comment_body"><a href="https://www.cnblogs.com/humi/p/8496152.html#3944699" title="查看所回复的评论" onclick="commentManager.renderComments(0,50,3944699);">@</a>
+追枫博客园<br>不需要安装bootstrap3版本，只需下载bootstrap3版本bootstrap.css 文件，也可以直接copy我博文正文所给的代码，然后将你所需要的 图标代码拷贝 到你所需的 css文件内，即可引用该fonts；正如 我将它拷到了 bootstrap4 的css文件。</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(3944728,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(3944728,&#39;Bury&#39;,this)">反对(0)</a></div><span id="comment_3944728_avatar" style="display:none;">http://pic.cnblogs.com/face/1128666/20170318105955.png</span>
+			</div>
+		</div>
+	
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+				<div class="feedbackManage">
+					&nbsp;&nbsp;<span class="comment_actions"></span>
+				</div>
+				<a href="https://www.cnblogs.com/humi/p/8496152.html#3944735" class="layer">#3楼</a><a name="3944735" id="comment_anchor_3944735"></a>  <span class="comment_date">2018-04-08 10:20</span> <a id="a_comment_author_3944735" href="http://home.cnblogs.com/u/1076619/" target="_blank">追枫博客园</a> <a href="http://msg.cnblogs.com/send/%E8%BF%BD%E6%9E%AB%E5%8D%9A%E5%AE%A2%E5%9B%AD" title="发送站内短消息" class="sendMsg2This">&nbsp;</a>
+			</div>
+			<div class="feedbackCon">
+				<div id="comment_body_3944735" class="blog_comment_body"><a href="https://www.cnblogs.com/humi/p/8496152.html#3944728" title="查看所回复的评论" onclick="commentManager.renderComments(0,50,3944728);">@</a>
+言非言<br>我按楼主所说，将CSS文件追加到  bootstrap-4.0.0-dist/css/bootstrap.css 文件中后，就报错了，报错如下：<br><br><div class="cnblogs_Highlighter sh-gutter"><div><div id="highlighter_187991" class="syntaxhighlighter  javascript"><div class="toolbar"><span><a href="https://www.cnblogs.com/humi/p/8496152.html#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div><div class="line number13 index12 alt2">13</div><div class="line number14 index13 alt1">14</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="javascript plain">Failed to compile.</code></div><div class="line number2 index1 alt1">&nbsp;</div><div class="line number3 index2 alt2"><code class="javascript plain">./node_modules/raw-loader!./node_modules/postcss-loader/lib??embedded!./node_modules/bootstrap/dist/css/bootstrap.css</code></div><div class="line number4 index3 alt1"><code class="javascript plain">(Emitted value instead of an instance of Error) CssSyntaxError: E:\Angular4Demo\auction\node_modules\bootstrap\dist\css\bootstrap.css:8980:13: Can</code><code class="javascript string">'t resolve '</code><code class="javascript plain">../fonts/glyphicons-halflings-regular.eot</code><code class="javascript string">' in '</code><code class="javascript plain">E:\Angular4Demo\auction\node_modules\bootstrap\dist\css</code><code class="javascript string">'</code></div><div class="line number5 index4 alt2">&nbsp;</div><div class="line number6 index5 alt1"><code class="javascript spaces">&nbsp;&nbsp;</code><code class="javascript string">8978 |&nbsp;&nbsp; font-family: '</code><code class="javascript plain">Glyphicons Halflings</code><code class="javascript string">';</code></div><div class="line number7 index6 alt2"><code class="javascript spaces">&nbsp;&nbsp;</code><code class="javascript string">8979 | </code></div><div class="line number8 index7 alt1"><code class="javascript string">&gt; 8980 |&nbsp;&nbsp; src: url('</code><code class="javascript plain">../fonts/glyphicons-halflings-regular.eot</code><code class="javascript string">');</code></div><div class="line number9 index8 alt2"><code class="javascript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="javascript string">|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ^</code></div><div class="line number10 index9 alt1"><code class="javascript spaces">&nbsp;&nbsp;</code><code class="javascript string">8981 |&nbsp;&nbsp; src: url('</code><code class="javascript plain">../fonts/glyphicons-halflings-regular.eot?</code><code class="javascript preprocessor">#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');</code></div><div class="line number11 index10 alt2"><code class="javascript spaces">&nbsp;&nbsp;</code><code class="javascript plain">8982 | }</code></div><div class="line number12 index11 alt1">&nbsp;</div><div class="line number13 index12 alt2"><code class="javascript spaces">&nbsp;</code><code class="javascript plain">@ ./node_modules/bootstrap/dist/css/bootstrap.css 4:14-118</code></div><div class="line number14 index13 alt1"><code class="javascript spaces">&nbsp;</code><code class="javascript plain">@ multi ./src/styles.css ./node_modules/bootstrap/dist/css/bootstrap.css</code></div></div></td></tr></tbody></table></div></div></div></div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(3944735,&#39;Digg&#39;,this)">支持(1)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(3944735,&#39;Bury&#39;,this)">反对(0)</a></div>
+			</div>
+		</div>
+	
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+				<div class="feedbackManage">
+					&nbsp;&nbsp;<span class="comment_actions"></span>
+				</div>
+				<a href="https://www.cnblogs.com/humi/p/8496152.html#3944763" class="layer">#4楼</a><a name="3944763" id="comment_anchor_3944763"></a>[<span class="louzhu">楼主</span>]  <span class="comment_date">2018-04-08 10:39</span> <a id="a_comment_author_3944763" href="https://www.cnblogs.com/humi/" target="_blank">言非言</a> <a href="http://msg.cnblogs.com/send/%E8%A8%80%E9%9D%9E%E8%A8%80" title="发送站内短消息" class="sendMsg2This">&nbsp;</a>
+			</div>
+			<div class="feedbackCon">
+				<div id="comment_body_3944763" class="blog_comment_body"><a href="https://www.cnblogs.com/humi/p/8496152.html#3944735" title="查看所回复的评论" onclick="commentManager.renderComments(0,50,3944735);">@</a>
+追枫博客园<br>fonts目录下的这个文件glyphicons-halflings-regular.eot你也得拷过去，我的目录如下<br><img src="./fonts_files/1128666-20180408103808614-833870365.png" alt="" border="0" "=""><br><br>你看代码这里引用了这些，你看缺哪些 就补充哪些。<br><div class="cnblogs_Highlighter sh-gutter"><div><div id="highlighter_300709" class="syntaxhighlighter  css"><div class="toolbar"><span><a href="https://www.cnblogs.com/humi/p/8496152.html#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="css keyword">src</code><code class="css plain">: </code><code class="css value">url</code><code class="css plain">(</code><code class="css string">'../fonts/glyphicons-halflings-regular.eot'</code><code class="css plain">);</code></div><div class="line number2 index1 alt1"><code class="css keyword">src</code><code class="css plain">: </code><code class="css value">url</code><code class="css plain">(</code><code class="css string">'../fonts/glyphicons-halflings-regular.eot?#iefix'</code><code class="css plain">) </code><code class="css value">format</code><code class="css plain">(</code><code class="css string">'embedded-opentype'</code><code class="css plain">), </code><code class="css value">url</code><code class="css plain">(</code><code class="css string">'../fonts/glyphicons-halflings-regular.woff2'</code><code class="css plain">) </code><code class="css value">format</code><code class="css plain">(</code><code class="css string">'woff2'</code><code class="css plain">), </code><code class="css value">url</code><code class="css plain">(</code><code class="css string">'../fonts/glyphicons-halflings-regular.woff'</code><code class="css plain">) </code><code class="css value">format</code><code class="css plain">(</code><code class="css string">'woff'</code><code class="css plain">), </code><code class="css value">url</code><code class="css plain">(</code><code class="css string">'../fonts/glyphicons-halflings-regular.ttf'</code><code class="css plain">) </code><code class="css value">format</code><code class="css plain">(</code><code class="css string">'truetype'</code><code class="css plain">), </code><code class="css value">url</code><code class="css plain">(</code><code class="css string">'../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular'</code><code class="css plain">) </code><code class="css value">format</code><code class="css plain">(</code><code class="css string">'svg'</code><code class="css plain">);</code></div></div></td></tr></tbody></table></div></div></div></div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(3944763,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(3944763,&#39;Bury&#39;,this)">反对(0)</a></div><span id="comment_3944763_avatar" style="display:none;">http://pic.cnblogs.com/face/1128666/20170318105955.png</span>
+			</div>
+		</div>
+	
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+				<div class="feedbackManage">
+					&nbsp;&nbsp;<span class="comment_actions"></span>
+				</div>
+				<a href="https://www.cnblogs.com/humi/p/8496152.html#3944776" class="layer">#5楼</a><a name="3944776" id="comment_anchor_3944776"></a>  <span class="comment_date">2018-04-08 10:45</span> <a id="a_comment_author_3944776" href="http://home.cnblogs.com/u/1076619/" target="_blank">追枫博客园</a> <a href="http://msg.cnblogs.com/send/%E8%BF%BD%E6%9E%AB%E5%8D%9A%E5%AE%A2%E5%9B%AD" title="发送站内短消息" class="sendMsg2This">&nbsp;</a>
+			</div>
+			<div class="feedbackCon">
+				<div id="comment_body_3944776" class="blog_comment_body"><a href="https://www.cnblogs.com/humi/p/8496152.html#3944763" title="查看所回复的评论" onclick="commentManager.renderComments(0,50,3944763);">@</a>
+言非言<br>好的，非常感谢！<br><br>看来我首先得把 bootstrap 3 的 fonts 文件夹下载下来才行。<br><br>按博主所说，下载bootstrap3版本bootstrap.css 文件就可以啦。</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(3944776,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(3944776,&#39;Bury&#39;,this)">反对(0)</a></div>
+			</div>
+		</div>
+	
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+				<div class="feedbackManage">
+					&nbsp;&nbsp;<span class="comment_actions"></span>
+				</div>
+				<a href="https://www.cnblogs.com/humi/p/8496152.html#3944858" class="layer">#6楼</a><a name="3944858" id="comment_anchor_3944858"></a>  <span class="comment_date">2018-04-08 11:35</span> <a id="a_comment_author_3944858" href="http://home.cnblogs.com/u/1076619/" target="_blank">追枫博客园</a> <a href="http://msg.cnblogs.com/send/%E8%BF%BD%E6%9E%AB%E5%8D%9A%E5%AE%A2%E5%9B%AD" title="发送站内短消息" class="sendMsg2This">&nbsp;</a>
+			</div>
+			<div class="feedbackCon">
+				<div id="comment_body_3944858" class="blog_comment_body">请问博主，用过bootstrap4.0的缩略图 thumbnail  样式吗？<br><br>单独就 thumbnail 而言，类名变成了img-thumbnail，添加位置也改在&lt;img&gt;标签里了，如：&lt;img src="..." alt="..." class="img-thumbnail"&gt;<br><br>我是如下这样使用的，但有问题。<br>（我查看了官方文档，也没有准确找到。博主如果方便，帮忙看一下。问题地址：https://segmentfault.com/q/1010000014225249）<br><br><div class="cnblogs_Highlighter sh-gutter"><div><div id="highlighter_636848" class="syntaxhighlighter  javascript"><div class="toolbar"><span><a href="https://www.cnblogs.com/humi/p/8496152.html#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div><div class="line number13 index12 alt2">13</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="javascript spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="javascript plain">&lt;div *ngFor=</code><code class="javascript string">"let product of products"</code> <code class="javascript keyword">class</code><code class="javascript plain">=</code><code class="javascript string">"img-thumbnail"</code><code class="javascript plain">&gt;</code></div><div class="line number2 index1 alt1"><code class="javascript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="javascript plain">&lt;img [src]=</code><code class="javascript string">"imgUrl"</code></div><div class="line number3 index2 alt2"><code class="javascript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="javascript plain">alt=</code><code class="javascript string">"通用的占位符缩略图"</code><code class="javascript plain">&gt;</code></div><div class="line number4 index3 alt1"><code class="javascript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="javascript plain">&lt;div </code><code class="javascript keyword">class</code><code class="javascript plain">=</code><code class="javascript string">"caption"</code><code class="javascript plain">&gt;</code></div><div class="line number5 index4 alt2"><code class="javascript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="javascript plain">&lt;h4 </code><code class="javascript keyword">class</code><code class="javascript plain">=</code><code class="javascript string">"pull-right"</code><code class="javascript plain">&gt;{{product.price}} 元&lt;/h4&gt;</code></div><div class="line number6 index5 alt1"><code class="javascript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="javascript plain">&lt;h4&gt;&lt;a&gt;{{product.title}}&lt;/a&gt;&lt;/h4&gt;</code></div><div class="line number7 index6 alt2"><code class="javascript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="javascript plain">&lt;p&gt;{{product.desc}}&lt;/p&gt;</code></div><div class="line number8 index7 alt1"><code class="javascript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="javascript plain">&lt;/div&gt;</code></div><div class="line number9 index8 alt2"><code class="javascript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="javascript plain">&lt;div&gt;</code></div><div class="line number10 index9 alt1"><code class="javascript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="javascript plain">&lt;app-starts [rating]=</code><code class="javascript string">"product.rating"</code><code class="javascript plain">&gt;&lt;/app-starts&gt;</code></div><div class="line number11 index10 alt2"><code class="javascript spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="javascript plain">&lt;/div&gt;</code></div><div class="line number12 index11 alt1">&nbsp;</div><div class="line number13 index12 alt2"><code class="javascript plain">&lt;/div&gt;</code></div></div></td></tr></tbody></table></div></div></div></div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(3944858,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(3944858,&#39;Bury&#39;,this)">反对(0)</a></div>
+			</div>
+		</div>
+	
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+				<div class="feedbackManage">
+					&nbsp;&nbsp;<span class="comment_actions"></span>
+				</div>
+				<a href="https://www.cnblogs.com/humi/p/8496152.html#3971619" class="layer">#7楼</a><a name="3971619" id="comment_anchor_3971619"></a>  <span class="comment_date">2018-05-10 16:33</span> <a id="a_comment_author_3971619" href="https://www.cnblogs.com/kinome/" target="_blank">#黑猫</a> <a href="http://msg.cnblogs.com/send/%23%E9%BB%91%E7%8C%AB" title="发送站内短消息" class="sendMsg2This">&nbsp;</a>
+			</div>
+			<div class="feedbackCon">
+				<div id="comment_body_3971619" class="blog_comment_body">大佬您解决问题的思路真的很不错啊！ 引用了一下您的css，直接就能使用3的图标啦~  开心w</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(3971619,&#39;Digg&#39;,this)">支持(1)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(3971619,&#39;Bury&#39;,this)">反对(0)</a></div><span id="comment_3971619_avatar" style="display:none;">http://pic.cnblogs.com/face/922272/20180919163809.png</span>
+			</div>
+		</div>
+	
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+				<div class="feedbackManage">
+					&nbsp;&nbsp;<span class="comment_actions"></span>
+				</div>
+				<a href="https://www.cnblogs.com/humi/p/8496152.html#3971622" class="layer">#8楼</a><a name="3971622" id="comment_anchor_3971622"></a>[<span class="louzhu">楼主</span>]<span id="comment-maxId" style="display:none;">3971622</span><span id="comment-maxDate" style="display:none;">2018/5/10 16:36:12</span>  <span class="comment_date">2018-05-10 16:36</span> <a id="a_comment_author_3971622" href="https://www.cnblogs.com/humi/" target="_blank">言非言</a> <a href="http://msg.cnblogs.com/send/%E8%A8%80%E9%9D%9E%E8%A8%80" title="发送站内短消息" class="sendMsg2This">&nbsp;</a>
+			</div>
+			<div class="feedbackCon">
+				<div id="comment_body_3971622" class="blog_comment_body"><a href="https://www.cnblogs.com/humi/p/8496152.html#3971619" title="查看所回复的评论" onclick="commentManager.renderComments(0,50,3971619);">@</a>
+绮萝酶<br>过奖，很开心自己的经验帮到了大家，我踩过的坑 大家就不要采了 大家可以节省时间</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(3971622,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(3971622,&#39;Bury&#39;,this)">反对(0)</a></div><span id="comment_3971622_avatar" style="display:none;">http://pic.cnblogs.com/face/1128666/20170318105955.png</span>
+			</div>
+		</div>
+	<div id="comments_pager_bottom"></div></div><script type="text/javascript">var commentManager = new blogCommentManager();commentManager.renderComments(0);</script>
+<div id="comment_form" class="commentform">
+<a name="commentform"></a>
+<div id="divCommentShow"></div>
+<div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="https://www.cnblogs.com/humi/p/8496152.html#" onclick="return RefreshPage();">刷新页面</a><a href="https://www.cnblogs.com/humi/p/8496152.html#top">返回顶部</a></div>
+<div id="comment_form_container"><div class="login_tips">注册用户登录后才能发表评论，请 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return login(&#39;commentform&#39;);">登录</a> 或 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return register();">注册</a>，<a href="http://www.cnblogs.com/">访问</a>网站首页。</div></div>
+<div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+<div id="ad_t2"><a href="http://www.ucancode.com/index.htm" target="_blank" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;T2-工控&#39;)">【推荐】超50万C++/C#源码: 大型实时仿真组态图形源码</a><br><a href="https://www.grapecity.com.cn/developer/spreadjs?utm_source=cnblogs&amp;utm_medium=blogpage&amp;utm_term=bottom&amp;utm_content=SpreadJS&amp;utm_campaign=community" target="_blank" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;T2-SpreadJS&#39;)">【前端】SpreadJS表格控件，可嵌入系统开发的在线Excel</a><br><a href="https://q.cnblogs.com/" target="_blank" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;T2-博问&#39;)">【推荐】程序员问答平台，解决您开发中遇到的技术难题</a><br></div>
+<div id="opt_under_post"></div>
+<script async="async" src="./fonts_files/gpt.js.下载"></script>
+<script>
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+</script>
+<script>
+  googletag.cmd.push(function() {
+        googletag.defineSlot('/1090369/C1', [300, 250], 'div-gpt-ad-1546353474406-0').addService(googletag.pubads());
+        googletag.defineSlot('/1090369/C2', [468, 60], 'div-gpt-ad-1539008685004-0').addService(googletag.pubads());
+        googletag.pubads().enableSingleRequest();
+        googletag.enableServices();
+  });
+</script>
+<div id="cnblogs_c1" class="c_ad_block" style="">
+    <div id="div-gpt-ad-1546353474406-0" style="height:250px; width:300px;" data-google-query-id="CK6J-veG3OICFUbOvQodxwEEDw"><div id="google_ads_iframe_/1090369/C1_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/1090369/C1_0" title="3rd party ad content" name="google_ads_iframe_/1090369/C1_0" width="300" height="250" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" data-google-container-id="1" data-load-complete="true" style="border: 0px; vertical-align: bottom;" src="./fonts_files/saved_resource.html"></iframe></div></div>
+</div>
+<div id="under_post_news"></div>
+<div id="cnblogs_c2" class="c_ad_block" style="">
+    <div id="div-gpt-ad-1539008685004-0" style="height:60px; width:468px;" data-google-query-id="CK-J-veG3OICFUbOvQodxwEEDw"><div id="google_ads_iframe_/1090369/C2_0__container__" style="border: 0pt none; width: 468px; height: 60px;"></div></div>
+</div>
+<div id="under_post_kb"></div>
+<div id="HistoryToday" class="c_ad_block"></div>
+<script type="text/javascript">
+ if(enablePostBottom()) {
+    codeHighlight();
+    fixPostBody();
+    setTimeout(function () { incrementViewCount(cb_entryId); }, 50);
+    deliverT2();
+    deliverC1();
+    deliverC2();    
+    loadNewsAndKb();
+    loadBlogSignature();
+    LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+    GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+    loadOptUnderPost();
+    GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);  
+}
+</script>
+</div>
+
+    
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<!--done-->
+<div class="newsItem">
+<h3 class="catListTitle">公告</h3>
+	<div id="blog-news"><script type="text/javascript">window['__document_write_ajax_callbacks__']['3']();</script><script type="text/javascript">window['__document_write_ajax_callbacks__']['1']();</script><div id="profile_block">昵称：<a href="https://home.cnblogs.com/u/humi/">言非言</a><br>园龄：<a href="https://home.cnblogs.com/u/humi/" title="入园时间：2017-03-18">2年2个月</a><br>粉丝：<a href="https://home.cnblogs.com/u/humi/followers/">4</a><br>关注：<a href="https://home.cnblogs.com/u/humi/followees/">13</a><div id="p_b_follow"><a href="javascript:void(0);" onclick="follow(&#39;070b91d4-820b-e711-845c-ac853d9f53ac&#39;)">+加关注</a></div><script type="text/javascript">window['__document_write_ajax_callbacks__']['4']();</script><script>window['__document_write_ajax_callbacks__']['2']();</script>我的git：<a href="https://github.com/himi7362" alt="GitHub">Himi7362</a></div></div><script type="text/javascript">loadBlogNews();</script>
+</div>
+
+			<div id="blog-calendar" style=""><table id="blogCalendar" class="Cal" cellspacing="0" cellpadding="0" title="Calendar">
+	<tbody><tr><td colspan="7"><table class="CalTitle" cellspacing="0">
+		<tbody><tr><td class="CalNextPrev"><a href="javascript:void(0);" onclick="loadBlogCalendar(&#39;2019/05/01&#39;);return false;">&lt;</a></td><td align="center">2019年6月</td><td class="CalNextPrev" align="right"><a href="javascript:void(0);" onclick="loadBlogCalendar(&#39;2019/07/01&#39;);return false;">&gt;</a></td></tr>
+	</tbody></table></td></tr><tr><th class="CalDayHeader" align="center" abbr="日" scope="col">日</th><th class="CalDayHeader" align="center" abbr="一" scope="col">一</th><th class="CalDayHeader" align="center" abbr="二" scope="col">二</th><th class="CalDayHeader" align="center" abbr="三" scope="col">三</th><th class="CalDayHeader" align="center" abbr="四" scope="col">四</th><th class="CalDayHeader" align="center" abbr="五" scope="col">五</th><th class="CalDayHeader" align="center" abbr="六" scope="col">六</th></tr><tr><td class="CalOtherMonthDay" align="center">26</td><td class="CalOtherMonthDay" align="center">27</td><td class="CalOtherMonthDay" align="center">28</td><td class="CalOtherMonthDay" align="center">29</td><td class="CalOtherMonthDay" align="center">30</td><td class="CalOtherMonthDay" align="center">31</td><td class="CalWeekendDay" align="center">1</td></tr><tr><td class="CalWeekendDay" align="center">2</td><td align="center">3</td><td align="center">4</td><td align="center">5</td><td align="center">6</td><td align="center">7</td><td class="CalWeekendDay" align="center">8</td></tr><tr><td class="CalTodayDay" align="center">9</td><td align="center">10</td><td align="center">11</td><td align="center">12</td><td align="center">13</td><td align="center">14</td><td class="CalWeekendDay" align="center">15</td></tr><tr><td class="CalWeekendDay" align="center">16</td><td align="center">17</td><td align="center">18</td><td align="center">19</td><td align="center">20</td><td align="center">21</td><td class="CalWeekendDay" align="center">22</td></tr><tr><td class="CalWeekendDay" align="center">23</td><td align="center">24</td><td align="center">25</td><td align="center">26</td><td align="center">27</td><td align="center">28</td><td class="CalWeekendDay" align="center">29</td></tr><tr><td class="CalWeekendDay" align="center">30</td><td class="CalOtherMonthDay" align="center">1</td><td class="CalOtherMonthDay" align="center">2</td><td class="CalOtherMonthDay" align="center">3</td><td class="CalOtherMonthDay" align="center">4</td><td class="CalOtherMonthDay" align="center">5</td><td class="CalOtherMonthDay" align="center">6</td></tr>
+</tbody></table></div><script type="text/javascript">loadBlogDefaultCalendar();</script>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"><div id="sidebar_search" class="sidebar-block"></div><div id="sidebar_toptags" class="sidebar-block">
+<div class="catListTag">
+<h3 class="catListTitle">我的标签</h3>
+<ul>
+<li><a href="https://www.cnblogs.com/humi/tag/java%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/">java开发问题汇总</a>(26)</li><li><a href="https://www.cnblogs.com/humi/tag/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AD%A6%E4%B9%A0%E4%B8%8E%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/">数据库学习与问题汇总</a>(26)</li><li><a href="https://www.cnblogs.com/humi/tag/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E7%BB%86%E8%8A%82%E6%B1%87%E6%80%BB/">开发工具细节汇总</a>(25)</li><li><a href="https://www.cnblogs.com/humi/tag/JavaEE%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0/">JavaEE基础复习</a>(17)</li><li><a href="https://www.cnblogs.com/humi/tag/%E5%85%B4%E8%B6%A3%E7%AC%AC%E4%B8%80/">兴趣第一</a>(15)</li><li><a href="https://www.cnblogs.com/humi/tag/JavaScript%E5%AD%A6%E4%B9%A0%E4%B8%8E%E9%97%AE%E9%A2%98/">JavaScript学习与问题</a>(12)</li><li><a href="https://www.cnblogs.com/humi/tag/Java%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/">Java开发环境</a>(12)</li><li><a href="https://www.cnblogs.com/humi/tag/%E5%89%8D%E7%AB%AF%7CUI/">前端|UI</a>(10)</li><li><a href="https://www.cnblogs.com/humi/tag/Java%20Web%20%E6%B7%B1%E5%85%A5%E5%88%86%E6%9E%90/">Java Web 深入分析</a>(10)</li><li><a href="https://www.cnblogs.com/humi/tag/Linux%7C%E6%9C%8D%E5%8A%A1%E5%99%A8%7C%E8%BF%90%E7%BB%B4/">Linux|服务器|运维</a>(6)</li><li><a href="https://www.cnblogs.com/humi/tag/">更多</a></li>
+</ul>
+</div></div><div id="sidebar_categories">
+<div id="sidebar_postarchive" class="catListPostArchive sidebar-block">
+<h3 class="catListTitle">随笔档案</h3>
+
+<ul>
+
+<li><a id="CatList_LinkList_0_Link_0" href="https://www.cnblogs.com/humi/archive/2019/04.html">2019年4月 (3)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_1" href="https://www.cnblogs.com/humi/archive/2019/03.html">2019年3月 (4)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_2" href="https://www.cnblogs.com/humi/archive/2019/02.html">2019年2月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_3" href="https://www.cnblogs.com/humi/archive/2018/12.html">2018年12月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_4" href="https://www.cnblogs.com/humi/archive/2018/09.html">2018年9月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_5" href="https://www.cnblogs.com/humi/archive/2018/08.html">2018年8月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_6" href="https://www.cnblogs.com/humi/archive/2018/06.html">2018年6月 (2)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_7" href="https://www.cnblogs.com/humi/archive/2018/05.html">2018年5月 (2)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_8" href="https://www.cnblogs.com/humi/archive/2018/04.html">2018年4月 (3)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_9" href="https://www.cnblogs.com/humi/archive/2018/03.html">2018年3月 (10)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_10" href="https://www.cnblogs.com/humi/archive/2018/02.html">2018年2月 (5)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_11" href="https://www.cnblogs.com/humi/archive/2018/01.html">2018年1月 (22)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_12" href="https://www.cnblogs.com/humi/archive/2017/12.html">2017年12月 (25)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_13" href="https://www.cnblogs.com/humi/archive/2017/11.html">2017年11月 (22)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_14" href="https://www.cnblogs.com/humi/archive/2017/10.html">2017年10月 (6)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_15" href="https://www.cnblogs.com/humi/archive/2017/09.html">2017年9月 (9)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_16" href="https://www.cnblogs.com/humi/archive/2017/08.html">2017年8月 (18)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_17" href="https://www.cnblogs.com/humi/archive/2017/07.html">2017年7月 (3)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_18" href="https://www.cnblogs.com/humi/archive/2017/06.html">2017年6月 (7)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_19" href="https://www.cnblogs.com/humi/archive/2017/05.html">2017年5月 (4)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_20" href="https://www.cnblogs.com/humi/archive/2017/03.html">2017年3月 (2)</a> </li>
+
+</ul>
+
+</div>
+
+</div><div id="sidebar_topviewedposts" class="sidebar-block"><div id="topview_posts_wrap">
+<div class="catListView">
+<h3 class="catListTitle">阅读排行榜</h3>
+	<div id="TopViewPostsBlock"><ul><li><a href="https://www.cnblogs.com/humi/p/8496152.html">1. Bootstrap4 glyphicon 移除图标 glyphicon fonts-faces 解决方案(8556)</a></li><li><a href="https://www.cnblogs.com/humi/p/7402679.html">2. PLSQL PL/SQL Developer Oracle 使用技巧  常用设置 卡顿问题 病毒防范（ 附带：配置文件）(5398)</a></li><li><a href="https://www.cnblogs.com/humi/p/8476597.html">3. win10下,cmd,power shell设置默认编码为‘UTF-8(3068)</a></li><li><a href="https://www.cnblogs.com/humi/p/7956586.html">4. 最强 代码注释 各种图像(3022)</a></li><li><a href="https://www.cnblogs.com/humi/p/6934589.html">5. 微软升级 WSL  Window Subsystem for Linux   Win10系统自带Linux(2833)</a></li><li><a href="https://www.cnblogs.com/humi/p/7268198.html">6. 原生 JS 绑定事件 移除事件(2651)</a></li><li><a href="https://www.cnblogs.com/humi/p/8443020.html">7. win10 总是很快自动关机   无人参与系统睡眠超时设置(1844)</a></li><li><a href="https://www.cnblogs.com/humi/p/7546419.html">8. Android蓝牙遥控器APP关键代码 guihub项目(1800)</a></li><li><a href="https://www.cnblogs.com/humi/p/6923592.html">9. 前端关于 superSlide.js 使用，一款基于jquery的前端控件(1775)</a></li><li><a href="https://www.cnblogs.com/humi/p/7682040.html">10. JSP JSONArray使用遇坑！添加以下6个jar包(1655)</a></li><li><a href="https://www.cnblogs.com/humi/p/7967535.html">11. java小工具：通过URL连接爬取资源（图片）(1613)</a></li><li><a href="https://www.cnblogs.com/humi/p/7979230.html">12. Java Web 深入分析（3） CDN(1369)</a></li><li><a href="https://www.cnblogs.com/humi/p/10170841.html">13. 关闭 禁止 window10 UpdateOrchestrator  UsoSvc服务(1339)</a></li><li><a href="https://www.cnblogs.com/humi/p/6935258.html" title="14. java jdbc 链接mysq 测试l 云服务器 和云数据库 mysql DB(1203)">14. java jdbc 链接mysq 测试l 云服务器 和云数据库 mysql DB(1203)</a></li><li><a href="https://www.cnblogs.com/humi/p/7398435.html">15. MyEclipse eclipse console edit packageExplorer 颜色设置、个性化、常用设置(1170)</a></li><li><a href="https://www.cnblogs.com/humi/p/7426582.html">16. Unsupported major.minor version 52.0错误和 jdbc odbc(1134)</a></li><li><a href="https://www.cnblogs.com/humi/p/7967627.html">17. Java Web 深入分析（1）B/S架构概述(1035)</a></li><li><a href="https://www.cnblogs.com/humi/p/8380347.html">18. Python 帮你玩微信跳一跳 GitHub Python脚本(963)</a></li><li><a href="https://www.cnblogs.com/humi/p/8306540.html">19. Sublime Text 添加C/C++环境(733)</a></li><li><a href="https://www.cnblogs.com/humi/p/8493986.html">20. eclipse 部署Tomcat  只有web-inf   webapps没有项目文件(640)</a></li><li><a href="https://www.cnblogs.com/humi/p/8296031.html">21. 谷歌浏览器 传递给系统调用的数据区域太小(465)</a></li><li><a href="https://www.cnblogs.com/humi/p/7880100.html">22. docker 学习1 WSL docker  ，Windows docker(439)</a></li><li><a href="https://www.cnblogs.com/humi/p/8593760.html">23. java.lang.NoClassDefFoundError: org/springframework/core/env/EnvironmentCapa(434)</a></li><li><a href="https://www.cnblogs.com/humi/p/9664984.html">24. Bootstraps 4 引入报错 Error: Bootstrap tooltips require Tether(411)</a></li><li><a href="https://www.cnblogs.com/humi/p/8380485.html">25. 最全的ADB命令行大全（转）(390)</a></li><li><a href="https://www.cnblogs.com/humi/p/7919937.html">26. JDBC 复习5  mysql 的自增长主键 auto_increment(339)</a></li><li><a href="https://www.cnblogs.com/humi/p/8555000.html">27. java 爬虫：开源java爬虫 swing工具 Imgraber(313)</a></li><li><a href="https://www.cnblogs.com/humi/p/9466420.html">28. PLSQL登录失败出现空白错误提示框的问题(290)</a></li><li><a href="https://www.cnblogs.com/humi/p/8024341.html">29. JFinal（1）JFinal helloworld(277)</a></li><li><a href="https://www.cnblogs.com/humi/p/7940823.html">30. MarkDown 语法大全查询(269)</a></li></ul></div>
+</div>
+</div></div><div id="sidebar_topcommentedposts" class="sidebar-block"><div id="topfeedback_posts_wrap">
+<div class="catListFeedback">
+<h3 class="catListTitle">评论排行榜</h3>
+	<div id="TopFeedbackPostsBlock"><ul><li><a href="https://www.cnblogs.com/humi/p/8496152.html">1. Bootstrap4 glyphicon 移除图标 glyphicon fonts-faces 解决方案(8)</a></li><li><a href="https://www.cnblogs.com/humi/p/8362137.html">2. Java Web 深入分析（9） Session 和 Cookie(2)</a></li><li><a href="https://www.cnblogs.com/humi/p/7956586.html">3. 最强 代码注释 各种图像(2)</a></li><li><a href="https://www.cnblogs.com/humi/p/7402679.html">4. PLSQL PL/SQL Developer Oracle 使用技巧  常用设置 卡顿问题 病毒防范（ 附带：配置文件）(2)</a></li><li><a href="https://www.cnblogs.com/humi/p/8380485.html">5. 最全的ADB命令行大全（转）(1)</a></li></ul></div>
+</div>
+</div></div><div id="sidebar_topdiggedposts" class="sidebar-block"><div id="topdigg_posts_wrap">
+<div class="catListView">
+<h3 class="catListTitle">推荐排行榜</h3>
+<div id="TopDiggPostsBlock"><ul><li><a href="https://www.cnblogs.com/humi/p/8496152.html">1. Bootstrap4 glyphicon 移除图标 glyphicon fonts-faces 解决方案(2)</a></li><li><a href="https://www.cnblogs.com/humi/p/8476597.html">2. win10下,cmd,power shell设置默认编码为‘UTF-8(1)</a></li></ul></div>
+</div></div></div></div><script type="text/javascript">loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		
+<!--done-->
+Copyright ©2019 言非言
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+
+<script type="text/javascript">
+$(function(){
+ //自动执行函数
+ (function(){
+    $('#profile_block').append('我的git：<a href="https://github.com/himi7362" alt="GitHub">Himi7362</a>')
+    $('#TopViewPostsBlock ul li > a ').mouseover(function(e){
+		$(this).attr('title',$(this).text())
+    });
+   $('#TopViewPostsBlock ul li>a').mouseover(function(e){
+		$(this).attr('title',$(this).text())
+    });
+ }());//end 自动函数
+      $(".qrcode").hover(function(){
+		$("#bottom-qrcode").fadeToggle();
+		});
+   
+    $("#likeid").hover(function(event){	
+                var pathname = window.location.pathname;
+                //   /humi/p/7682040.html
+              //console.log('length'+pathname.length+'pathname='+pathname)
+                if (pathname.length <7)return;
+                var titleArr = pathname.split("/");
+                var titleid = titleArr[3].substring(0,7)
+		console.log("window.location.pathname="+titleid.length);
+               if(titleid.length==7){ //推荐文章
+                  $("#likeid").attr('title','推荐');
+                }else{
+                  $("#likeid").attr('title','关注');
+                }
+		});  
+ 
+   $("#totop").click(function(event){	
+		$('html,body').animate({scrollTop:0}, 100);
+		return false;
+	});
+
+       
+});//end jq
+</script><script type="text/javascript">getFollowStatus('070b91d4-820b-e711-845c-ac853d9f53ac')</script></body></html>

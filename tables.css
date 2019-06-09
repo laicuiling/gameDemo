@@ -4,3 +4,6 @@
 .mr-auto,.mx-auto{
     margin-right: auto !important;
 }
+.m-auto{
+    margin: auto !important;
+}

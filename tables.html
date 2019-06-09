@@ -6,9 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./tables.css">
     <link rel="stylesheet" href="./bootstrap-4.3.1-dist/css/bootstrap.min.css">
-    <script src="./bootstrap-4.3.1-dist/js/popper.js"></script>
-    <script src="./bootstrap-4.3.1-dist/js/jquery-3.4.1.min.js"></script>
-    <script src="./bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
     <title>tables</title>
 </head>
 <body>
@@ -30,6 +28,119 @@
             <a class="breadcrumb-item" href="#">Dashboard</a>
             <span class="breadcrumb-item active" href="#">Table</span>
         </nav>
+
+        <!-- 卡片 -->
+        <div class="card">
+            <div class="card-header">
+                <span class="glyphicon glyphicon-th-large"></span>
+                Data Table Example
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        Show
+                        <select class="selectpicker">
+                            <option value="">10</option>
+                            <option value="">25</option>
+                            <option value="">50</option>
+                        </select>
+                        entries
+                    </div>
+                    <!-- 搜索框 -->
+                    <div class="col-md-6">
+                        <from class="from-inline">
+                            <label for="">Search:</label>
+                            <input type="text" value="">
+                        </from>
+                    </div>
+                </div>
+                    <!-- table -->
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>name</th>
+                                <th>position</th>
+                                <th>office</th>
+                                <th>age</th>
+                                <th>start date</th>
+                                <th>salary</th>
+                            </tr>
+                        </thead>
+                            <tr>
+                                <td>airi station</td>
+                                <td>airi station</td>
+                                <td>airi station</td>
+                                <td>airi station</td>
+                                <td>airi station</td>
+                                <td>airi station</td>
+                            </tr>
+                            <tr>
+                                <td>airi station</td>
+                                <td>airi station</td>
+                                <td>airi station</td>
+                                <td>airi station</td>
+                                <td>airi station</td>
+                                <td>airi station</td>
+                            </tr>
+                            <tr>
+                                <td>airi station</td>
+                                <td>airi station</td>
+                                <td>airi station</td>
+                                <td>airi station</td>
+                                <td>airi station</td>
+                                <td>airi station</td>
+                            </tr>
+                            <tr>
+                                <td>airi station</td>
+                                <td>airi station</td>
+                                <td>airi station</td>
+                                <td>airi station</td>
+                                <td>airi station</td>
+                                <td>airi station</td>
+                            </tr>
+                            <tr>
+                                <td>airi station</td>
+                                <td>airi station</td>
+                                <td>airi station</td>
+                                <td>airi station</td>
+                                <td>airi station</td>
+                                <td>airi station</td>
+                            </tr>
+                        <thead>
+                            <tr>
+                                <th>name</th>
+                                <th>position</th>
+                                <th>office</th>
+                                <th>age</th>
+                                <th>start date</th>
+                                <th>salary</th>
+                            </tr>
+                        </thead>
+                    </table>
+                <!-- 分页 -->
+                    <div class="row">
+                        <div class="col-xs-4 m-auto">
+                            Showing 1 to 10 of 10 entries
+                        </div>
+                        <div class="col-xs-8 justify-content-end">
+                            <ul class="pagination pagination-md">
+                                <li class="page-item disabled"><a href="#" class="page-link">Previous</a></li>
+                                <li class="page-item active"><a href="#" class="page-link">1</a></li>
+                                <li class="page-item"><a href="#" class="page-link">2</a></li>
+                                <li class="page-item"><a href="#" class="page-link">3</a></li>
+                                <li class="page-item"><a href="#" class="page-link">4</a></li>
+                                <li class="page-item"><a href="#" class="page-link">5</a></li>
+                                <li class="page-item"><a href="#" class="page-link">Next</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            <!-- 底部 -->
+            <div class="card-footer">
+                <small>updated yesterday at 10:59 PM</small>
+            </div>
+        </div>
+
         <!-- 无法使用面板 -->
         <!-- <div class="panel panel-default">
             <div class="panel-heading">
@@ -50,4 +161,7 @@
     </div>
 
 </body>
+<script src="./bootstrap-4.3.1-dist/js/popper.js"></script>
+<script src="./bootstrap-4.3.1-dist/js/jquery-3.4.1.min.js"></script>
+<script src="./bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
 </html>
