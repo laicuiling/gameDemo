@@ -1,0 +1,10 @@
+document.writeln("<script type=\"text\/javascript\"><!--");
+document.writeln("google_ad_client = \"ca-pub-6686262074117884\";");
+document.writeln("\/* code1 *\/");
+document.writeln("google_ad_slot = \"8341839823\";");
+document.writeln("google_ad_width = 336;");
+document.writeln("google_ad_height = 280;");
+document.writeln("\/\/-->");
+document.writeln("<\/script>");
+document.writeln("<script type=\"text\/javascript\" src=\"http:\/\/pagead2.googlesyndication.com\/pagead\/show_ads.js\">");
+document.writeln("<\/script>")

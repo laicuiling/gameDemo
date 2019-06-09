@@ -1,0 +1,18 @@
+html{
+    background: #000;
+}
+.v-bg{
+    background-color: #000;
+}
+._bg{
+    background-color: #000;
+}
+.card-login{
+    max-width: 25rem;
+}
+.ml-auto,.mx-auto{
+    margin-left:auto !important; 
+}
+.mr-auto,.mx-auto{
+    margin-right: auto !important;
+}

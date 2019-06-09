@@ -1,0 +1,151 @@
+body { color: black; background-repeat: repeat-x; margin: 0; padding: 0; font-size: 12px; font-family:verdana; background-image: url(/public/image/top.jpg); }
+a:link,a:visited,a:active{text-decoration: none; }
+a:hover{text-decoration: underline; }
+
+p {}
+
+td {}
+
+
+/* top */
+.padbcont_header { color: #999; font-size: 16px; line-height: 52px; width:1000px; height: 52px; margin-right: auto; margin-left: auto; }
+.padbox_header {width:auto; height:auto;}
+.padbox_header a{ color: #38ba07; font-weight: bold; text-decoration: none; }
+.top{ background-color: white; width: 100%; height: 50px; margin-right: auto; margin-left: auto; }
+
+.search{ background-color: #f6f6f6; width: 100%; height: 50px; border-bottom: 1px solid #dfdfdf; }
+.searchbox { width: 100%; margin-right: auto; margin-left: auto; padding-top: 5px; }
+#searchform{ background-color: white; width: 350px; height: 36px; margin-right: auto; margin-left: auto; border: solid 2px #1e8733; }
+#searchinput{ font-size: 18px; line-height: 25px; background-color: white; width: 263px; height: 28px; padding-left: 10px; border-width: 0; }
+#searchbutton{ color: #1e8733; font-size: 16px; font-weight: bold; background-color: white; background-image: url(/public/image/submit.gif); background-repeat: no-repeat; background-position: 0 0; width: 68px; height: 32px; margin: 2px 0 0; padding: 0; border: solid 1px; }
+/* main */
+.mainbox{ background-color: #f1f1f1; width: 1000px; height: auto; margin: 10px auto; padding: 8px; -moz-border-radius: 12px; -webkit-border-radius: 12px; border-radius: 12px; }
+/* footer */
+.footer{ background-color: #f1f1f1; height: 40px; border-top: 1px solid #e6e6e6; }
+.box{ width: 1000px; margin-right: auto; margin-left: auto; color:#99999c; height: 25px; padding-top: 15px; }
+.fright{float:right;}
+.cgray,.cgray a,.cgray:visited{color:#99999c;}
+/**/
+.navboxcont_mainbody { width: 100%; height: auto; }
+.navboxleft_mainbody { width:700px; height: 100%; float:left; }
+.navboxauto_mainbody { margin-left:700px; width:auto; }
+.navboxauto_mainbody a{ font-size: 13px; line-height: 22px; }
+.newcodetxt{ color: #666; font-size: 14px; font-weight: bold; line-height: 25px; width: 97%; height: 24px; margin-top: 5px; padding-left: 8px; border-bottom: 2px solid #666; }
+.newcodelist{ width: 100%; }
+.navboxcont_newcodelist { width: 98%; margin-top: 10px; margin-bottom: 10px; padding-bottom: 8px; border-bottom: 2px solid #f5f5f5; }
+.navboxleft_newcodelist { width:10px; float:left;}
+.navboxauto_newcodelist { margin-left:10px; width:auto;}
+.navboxauto_newcodelist1{}
+.navboxauto_newcodelist1 a{ color: #3bbe07; font-size: 15px; line-height: 25px; }
+.navboxauto_newcodelist2{ color: #c1c1c1; font-size: 12px; line-height: 20px; }
+.navboxauto_newcodelist2 a{ color: #c1c1c1; }
+.navboxauto_newcodelist3{word-wrap:break-word;}
+
+/**/
+
+.softtitletxt h1{ color: #666; font-size: 14px; font-weight: bold; line-height: 25px; width: 100%; height: 24px; margin-top: 5px; padding-left: 8px; }
+.softtext{ line-height: 22px; padding: 5px; }
+.softtext a{ color: #1905b1; font-size: 13px; }
+.softtext1{ font-size: 15px; margin-top: 5px; margin-bottom: 5px; border-bottom: 3px solid #dbe4ea; }
+.softtext1_1{ margin-bottom: 10px; -moz-border-radius: 8px; -webkit-border-radius: 8px; border-radius: 8px; }
+
+.softtext2{ float: left; }
+.softtext2_1{}
+
+.softtext3{ float: left; }
+.softtext3_1{}
+
+.softtext4{ float: left; }
+.softtext4_1{}
+
+
+.treetxt{}
+.tree{ font-size: 12px; line-height: 22px; background-color: #f3f3f3; margin: 2px; padding: 8px; border: solid 1px #666; }
+.tree ul{ margin: 0; padding: 0; }
+.tree li{ list-style-type: none; }
+.tree a{ color: #00840b; }
+
+.showcodelink{ font-weight: bold; }
+.showcodesize{ font-size: 12px; font-style: italic; padding-left: 8px; }
+.showcodedownlink{ font-size: 12px; background-image: url(/public/image/down_ico.gif); background-repeat: no-repeat; background-position: 0 5px; text-decoration: none; padding-left: 15px; }
+.showimg{ font-size: 12px; background-image: url(/public/image/amplification.png); background-repeat: no-repeat; background-position: 0 2px; text-decoration: none; padding-left: 12px;}
+
+/* showcode */
+.showcode1 h1{ font-size: 15px; margin: 0; padding: 0; }
+.showcode2{ margin-top: 15px; margin-bottom: 20px; }
+.showcode2 a{ color: blue; }
+.showcode3{ }
+.code{ background-color: #f3f3f3; margin: 2px; padding: 5px; border: solid 1px #666; }
+.code img{ padding:10px; margin:10px; border:0px;}
+.newsoftlist{ font-size: 14px; font-weight: bold; line-height: 18px; }
+.newsoft{ font-size:12px; font-weight: normal; line-height:22px; }
+.newsofttime{ color: #a3a3a3; }
+
+/* downloadsoft */
+.downloadsoft{ width: 98%; margin-right: auto; margin-left: auto; }
+.downloadsoft1 h1{ font-size: 15px; margin: 0; padding: 0; }
+.downloadsoft2{ margin-top: 10px; margin-bottom: 10px; }
+.downloadsoft3{ height: 200px; margin-top: 10px; margin-bottom: 10px; }
+
+/* search */
+.redkeyword { color: red; font-weight: bold; }
+.noresult{ font-size: 13px; margin-top: 10px; height: 800px; }
+
+pre {
+white-space: pre-wrap;       /* css-3 */
+white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+white-space: -pre-wrap;      /* Opera 4-6 */
+white-space: -o-pre-wrap;    /* Opera 7 */
+word-wrap: break-word;       /* Internet Explorer 5.5+ */
+} 
+
+
+
+/* back-to-top */
+p#back-to-top{ 
+position:fixed; 
+right: 50px; bottom: 50px; 
+_position:absolute;
+_right: 50px; 
+_bottom: 50px; 
+/*
+_top: expression(documentElement.scrollTop+350+"px");
+_right: expression(documentElement.scrollRight+0+"px");
+*/
+}
+p#back-to-top a{
+      text-align:center;
+      text-decoration:none;
+      color:#d1d1d1;
+	  _color:#666666;
+      display:block;
+      width:80px;
+      /*使用CSS3中的transition属性给跳转链接中的文字添加渐变效果*/
+      -moz-transition:color 1s;
+      -webkit-transition:color 1s;
+      -o-transition:color 1s;
+}
+p#back-to-top a:hover{
+      color:#979797;
+}
+p#back-to-top a span{
+      background:#d1d1d1 url(/public/image/arrow-up.png) no-repeat center center;
+      border-radius:6px;
+      display:block;
+      height:80px;
+      width:80px;
+      margin-bottom:5px;
+
+      /*使用CSS3中的transition属性给<span>标签背景颜色添加渐变效果*/
+
+      -moz-transition:background 1s;
+      -webkit-transition:background 1s;
+      -o-transition:background 1s;
+}
+#back-to-top a:hover span{
+      background:#979797 url(/public/image/arrow-up.png) no-repeat center center;
+}
+/* ad */
+.list_a { width:730px; height:280px ; margin: 0; padding: 0;}
+.listl_a { text-align: right; width:340px; height:280px; float:left; }
+.listr_a { text-align: left; width:380px; height:280px ; float: right; }
