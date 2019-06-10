@@ -7,3 +7,8 @@
 .m-auto{
     margin: auto !important;
 }
+.nav-fixed-top{
+    -webkit-border-radius:0;
+    -moz-border-radius:0;
+    border-radius: 0;
+}
