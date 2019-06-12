@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./bootstrap-4.3.1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
     <title>Document</title>
+    
 </head>
 <body>
     <nav class="nav navbar-inverse bg-dark navbar-dark static-top">
@@ -22,21 +23,230 @@
                         </div>
                 </div>
                 <div class="col-md-8 m-auto">
-                    <div class="col-md-4 offset-md-2">
+                    <div class="col-md-4 offset-md-5">
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="" >
                             <span class="input-group-btn"><button type="button" class="btn btn-primary">Go</button></span>
                         </div>                                                                            
                     </div>
-                    <div class="col-md-4 offset-md-2">
-
+                    <div class="col-md-3">
+                        <button type="button" class="btn btn-light"><span class="badge badge-danger">18</span></button>
+                        <button type="button" class="btn btn-light"><span class="badge badge-danger">18</span></button>
+                        <button type="button" class="btn btn-light"><span class="badge badge-danger">18</span></button>
                     </div>
-
                 </div>
-                
+
             </div>
         </div>
     </nav>
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-md-2 bg-dark">
+                <ul class="nav nav-tab vertical-tab " role="tablist" id="" style="display: block">
+                    <li class=" nav-item">
+                        <a href="#tables" class="nav-link active text-white" data-toggle="tab">tables</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#list" class="nav-link text-white" data-toggle="tab">tables</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-md-10">
+                <div role="tabpanel" class="tab-pane active" id="tables">
+                        <nav class="breadcrumb mt-3">
+                                <a class="breadcrumb-item" href="#">Dashboard</a>
+                                <span class="breadcrumb-item active" href="#">Table</span>
+                            </nav>
+                    
+                            <!-- 卡片 -->
+                            <div class="card">
+                                <div class="card-header">
+                                    <span class="glyphicon glyphicon-th-large"></span>
+                                    Data Table Example
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-6 m-auto">
+                                            Show
+                                            <select class="selectpicker form-control-sm">
+                                                <option value="">10</option>
+                                                <option value="">25</option>
+                                                <option value="">50</option>
+                                            </select>
+                                            entries
+                                        </div>
+                                        <!-- 搜索框 -->
+                                        <div class="col-md-6 text-right">
+                                            <div class="input-group">
+                                                Search:
+                                                <input type="search" class="form-control-sm">
+                                            </div>
+                                        </div>
+                                    </div>
+                                        <!-- table -->
+                                        <table class="table table-bordered mt-1">
+                                            <thead>
+                                                <tr>
+                                                    <th>name</th>
+                                                    <th>position</th>
+                                                    <th>office</th>
+                                                    <th>age</th>
+                                                    <th>start date</th>
+                                                    <th>salary</th>
+                                                </tr>
+                                            </thead>
+                                                <tr>
+                                                    <td>airi station</td>
+                                                    <td>airi station</td>
+                                                    <td>airi station</td>
+                                                    <td>airi station</td>
+                                                    <td>airi station</td>
+                                                    <td>airi station</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>airi station</td>
+                                                    <td>airi station</td>
+                                                    <td>airi station</td>
+                                                    <td>airi station</td>
+                                                    <td>airi station</td>
+                                                    <td>airi station</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>airi station</td>
+                                                    <td>airi station</td>
+                                                    <td>airi station</td>
+                                                    <td>airi station</td>
+                                                    <td>airi station</td>
+                                                    <td>airi station</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>airi station</td>
+                                                    <td>airi station</td>
+                                                    <td>airi station</td>
+                                                    <td>airi station</td>
+                                                    <td>airi station</td>
+                                                    <td>airi station</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>airi station</td>
+                                                    <td>airi station</td>
+                                                    <td>airi station</td>
+                                                    <td>airi station</td>
+                                                    <td>airi station</td>
+                                                    <td>airi station</td>
+                                                </tr>
+                                            <thead>
+                                                <tr>
+                                                    <th>name</th>
+                                                    <th>position</th>
+                                                    <th>office</th>
+                                                    <th>age</th>
+                                                    <th>start date</th>
+                                                    <th>salary</th>
+                                                </tr>
+                                            </thead>
+                                        </table>
+                                    <!-- 分页 -->
+                                        <div class="row">
+                                            <div class="col-md-6 m-auto">
+                                                Showing 1 to 10 of 10 entries
+                                            </div>
+                                            <nav aria-label="" class="col-md-6 text-right">
+                                                <ul class="pagination">
+                                                    <li class="page-item disabled"><a href="#" class="page-link">Previous</a></li>
+                                                    <li class="page-item active"><a href="#" class="page-link">1</a></li>
+                                                    <li class="page-item"><a href="#" class="page-link">2</a></li>
+                                                    <li class="page-item"><a href="#" class="page-link">3</a></li>
+                                                    <li class="page-item"><a href="#" class="page-link">4</a></li>
+                                                    <li class="page-item"><a href="#" class="page-link">5</a></li>
+                                                    <li class="page-item"><a href="#" class="page-link">Next</a></li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                <!-- 底部 -->
+                                <div class="card-footer">
+                                    <small>updated yesterday at 10:59 PM</small>
+                                </div>
+                
+                            </div>
+                
+                        
+                </div>
+                <div role="tabpanel" class="tab-pane active" id="list">
+                        
+                </div>
+            </div>
+
+
+
+
+
+
+
+            
+ 
+  
+    <!-- <div class="col-xs-2">
+        <ul class="nav nav-tab vertical-tab" role="tablist" id="vtab" style="display: block">
+            <li role="presentation" class="active">
+                <a href="#tab1" aria-controls="home" role="tab"
+                   data-toggle="tab">本地</a>
+            </li>
+            <li role="presentation">
+                <a href="#tab2" aria-controls="inbox" role="tab"
+                   data-toggle="tab">系统</a>
+            </li>
+            <li role="presentation">
+                <a href="#tab3" aria-controls="outbox" role="tab"
+                   data-toggle="tab">网络</a>
+            </li>
+            <li role="presentation">
+                <a href="#tab4" aria-controls="inbox1" role="tab"
+                   data-toggle="tab">视音频</a>
+            </li>
+            <li role="presentation">
+                <a href="#tab5" aria-controls="outbox1" role="tab"
+                   data-toggle="tab">图像</a>
+            </li>
+            <li role="presentation">
+                <a href="#tab6" aria-controls="outbox1" role="tab"
+                   data-toggle="tab">事件</a>
+            </li>
+            <li role="presentation">
+                <a href="#tab7" aria-controls="outbox1" role="tab"
+                   data-toggle="tab">存储</a>
+            </li>
+        </ul>
+    </div>
+    <div class="tab-content vertical-tab-content col-xs-10">
+        <div role="tabpanel" class="tab-pane active" id="tab1">.本地..</div>
+        <div role="tabpanel" class="tab-pane" id="tab2">.系统..</div>
+        <div role="tabpanel" class="tab-pane" id="tab3">..网络.</div>
+        <div role="tabpanel" class="tab-pane" id="tab4">.视音频..</div>
+        <div role="tabpanel" class="tab-pane" id="tab5">..图像.</div>
+        <div role="tabpanel" class="tab-pane" id="tab6">..事件.</div>
+        <div role="tabpanel" class="tab-pane" id="tab7">..存储.</div>
+    </div> -->
+
+        </div>
+
+
+
+
+
+
+
+ 
+            
+
+
+
+
+
+    </div>
 
 
     

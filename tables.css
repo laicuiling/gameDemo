@@ -12,3 +12,7 @@
     -moz-border-radius:0;
     border-radius: 0;
 }
+.disblock{
+    display: block;
+}
+.nav-tab ul li a{color: white;}
