@@ -15,4 +15,6 @@
 .disblock{
     display: block;
 }
-.nav-tab ul li a{color: white;}
+.cor-ft ul li a{
+    color:gray;
+}
