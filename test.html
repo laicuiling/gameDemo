@@ -28,7 +28,7 @@
     </br>
 <hr>
          -->
-
+        <div class="container-fluid">
         <!-- 导航条 -->
         <nav class="nav navbar-inverse navbar-dark bg-dark static-top">
             <div class="container-fluid">
@@ -54,41 +54,87 @@
             </div>
         </nav>
         <!-- 垂直导航 -->
-            <div class="row">
+        <div class="row">
                     
-                <div class="col-md-2 col-xs-2 bg-dark">
-                    <nav class="navbar navbar-expand-md">
-                        <ul class="nav flex-column" role="tablist">
-                            <li class="nav-item"><a class="nav-link" href="#charts1" data-toggle="tab"><i class="fa fa-tachometer" aria-hidden="true"></i>&nbsp;Dashboard</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#charts2" data-toggle="tab"><i class="fa fa-file" aria-hidden="true"></i>&nbsp;Pages</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#charts3" data-toggle="tab"><i class="fa fa-area-chart" aria-hidden="true"></i>&nbsp;Chasrts</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#charts3" data-toggle="tab"><i class="fa fa-table" aria-hidden="true"></i>&nbsp;Tables</a></li>
-                        </ul>
-                    </nav>
-                </div>
+            <div class="col-md-2 col-xs-2 bg-dark">
+                <nav class="navbar navbar-expand-md">
+                    <ul class="nav flex-column" role="tablist">
+                        <li class="nav-item"><a class="nav-link" href="#charts1" data-toggle="tab"><i class="fa fa-tachometer" aria-hidden="true"></i>&nbsp;Dashboard</a></li>
+                        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#charts2" data-toggle="tab"><i class="fa fa-file" aria-hidden="true"></i>&nbsp;Pages<i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" class="">login</a></li>
+                                <li><a href="#" class="">charts</a></li>
+                                <li><a href="#" class="">tables</a></li>
+                            </ul>
+                                
+                            
+                        <li class="nav-item"><a class="nav-link" href="#charts3" data-toggle="tab"><i class="fa fa-area-chart" aria-hidden="true"></i>&nbsp;Chasrts</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#charts3" data-toggle="tab"><i class="fa fa-table" aria-hidden="true"></i>&nbsp;Tables</a></li>
+                    </ul>
+                </nav>
+            </div>
 
-                <div class="col-md-10 col-xs-10">
-                    <div class="tab-content">
-                        <div class="tab-pane active" id="charts1">
-                               嘎嘎嘎嘎嘎
-                     
+            <div class="col-md-10 col-xs-10 tab-content">
+                <div class="tab-pane active" id="charts1">
+                    <!-- 面包屑导航 -->
+                    <nav class="breadcrumb mt-3">
+                        <a class="breadcrumb-item" href="#">Dashboard</a>
+                        <a class="breadcrumb-item active">Overview</a>
+                    </nav>
+                    <!-- 卡片 -->
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="card bg-primary text-white">
+                                <div class="card-header">26 New Messsgaes!</div>
+                                <div class="card-body">View Details<i class="fa fa-angle-right pull-right"></i></div>
+                            </div>
                         </div>
-                        <div class="tab-pane fade" id="charts2">
-                                    
-                               dsd 
+                        <div class="col-md-3">
+                            <div class="card bg-warning text-white">
+                                <div class="card-header">26 New Messsgaes!</div>
+                                <div class="card-body">View Details<i class="fa fa-angle-right pull-right"></i></div>
+                            </div>
                         </div>
-                        <div class="tab-pane fade" id="charts3">
-                                    
-                                dsf        
+                        <div class="col-md-3">
+                            <div class="card bg-success text-white">
+                                <div class="card-header">26 New Messsgaes!</div>
+                                <div class="card-body">View Details<i class="fa fa-angle-right pull-right"></i></div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card bg-danger text-white">
+                                <div class="card-header">26 New Messsgaes!</div>
+                                <div class="card-body">View Details<i class="fa fa-angle-right pull-right"></i></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- 统计图 -->
+                    <div class="card mt-3">
+                        <div class="card-header">
+                            <i class="fa fa-area-chart"></i>&nbsp; Area Chart Example
+                        </div>
+                        <div class="card-body">
+                            统计图
+                        </div>
+                        <div class="card-footer">
+                            Updated yesterday at 11:59 PM
                         </div>
                     </div>
+                    </div>
+
+                <div class="tab-pane active" id="charts1">
+                    
                 </div>
-
-
-                <!-- 导航条 -->
-                <div class=""></div>
+                <div class="tab-pane active" id="charts1">
+                
+                </div>
+            </div>
+                               
+                           
+        </div>
     </div>
-
             
 
 
